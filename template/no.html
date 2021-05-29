@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADP</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <style>
+        @mixin tablet-and-up {
+            @media screen and (min-width: 769px) {
+                @content;
+            }
+        }
+
+        @mixin mobile-and-up {
+            @media screen and (min-width: 601px) {
+                @content;
+            }
+        }
+
+        @mixin tablet-and-down {
+            @media screen and (max-width: 768px) {
+                @content;
+            }
+        }
+
+        @mixin mobile-only {
+            @media screen and (max-width: 600px) {
+                @content;
+            }
+        }
+
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            background: radial-gradient(#3e5c92, #243b55);
+            padding: 3rem 0;
+        }
+
+        .wrapper {
+            background: radial-gradient(#3e5c92, #243b55);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: rgb(235, 224, 127);
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .sessions {
+            margin-top: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+        li {
+            padding-bottom: 1.5rem;
+            border-left: 1px solid #abaaed;
+            position: relative;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        li:last-child {
+            border: 0px;
+            padding-bottom: 0;
+        }
+
+        li:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 1px solid #4e5ed3;
+            box-shadow: 3px 3px 0px #bab5f8;
+            box-shadow: 3px 3px 0px #bab5f8;
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 0px;
+        }
+
+        .time {
+            color: #d8fd05;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+
+            @include mobile-and-up {
+                font-size: .9rem;
+            }
+
+            @include mobile-only {
+                margin-bottom: .3rem;
+                font-size: 0.85rem;
+            }
+
+        }
+
+        p {
+            color: #ffffff;
+            font-family: sans-serif;
+            line-height: 1.5;
+            margin-top: 0.4rem;
+
+            @include mobile-only {
+                font-size: .9rem;
+            }
+        }
+
+
+        .body1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: relative;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 65px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-shadow: 0 0 0.15em #1da9cc;
+            user-select: none;
+            white-space: nowrap;
+            filter: blur(0.007em);
+            animation: shake 2.5s linear forwards;
+        }
+        img{
+            width:500px;
+            height:300px;
+            object-fit:scale-down;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="body1">
+                <h1>PREDICTION RESULTS</h1>
+            </div>
+            <br>
+            <ul class="sessions">
+                <li>
+                    <div class="time"><b>THE PATIENT IS NOT HAVING CORONARY ARTERY DISEASE</b></div>
+                    <p>We recommend you to follow below activites to be healthy</p>
+                    <br>
+                    <img src="\static\images\healthylifestyles.png" alt="network error">
+                </li>
+                <li>
+                    <div class="time">Take Fitness Seriously</div>
+                    <br>
+                    <img src="\static\images\healthyfitness.jpg" alt="network error">
+                </li>
+                <li>
+                    <div class="time">Practice Yoga Daily</div>
+                    <br>
+                    <img src="\static\images\yoga.jpg" alt="network error">
+                </li>
+                <li>
+                    <div class="time">DO NOT SMOKE</div>
+                    <br>
+                    <img src="\static\images\dontsmoke.jpg" alt="network error">
+                </li>
+                <li>
+                    <div class="time">EAT HEALTHY FATS NOT TRANS FATS</div>
+                    <br>
+                    <img src="\static\images\healthyfats.jpg" alt="network error">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

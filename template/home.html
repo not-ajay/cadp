@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale =1.0">
+    <title>CADP</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div class="header">
+  <div class="container">
+      <div class="navbar">
+       <div class="logo">
+           <!-- <img src="images/.png" alt="" width="125px"> -->
+           <a href="#">CADP</a>
+       </div>
+       <nav>
+           <ul id="MenuItems">
+               <li><a href="#">Home</a></li>
+               <li><a href="{{ url_for('about')}}">About</a></li>
+               <li><a href="{{ url_for('contact')}}">Contact</a></li>
+           </ul>
+       </nav>
+   </div>
+   <div class="row">
+       <div class="col-2">
+           <h1>CORONARY ARTERY<br> DISEASE PREDICTOR</h1>
+           <p>Coronary artery disease, also known as coronary heart disease, is the most common type of heart disease.<br>It develops when the arteries that supply blood to the heart become clogged with plaque. This causes them to harden and
+        narrow. Plaque contains cholesterol and other substances.</p>
+           <a href="{{ url_for('predict')}}" class="btn">Predictor &#8594;</a>
+           <a href="{{ url_for('symptoms')}}" class="btn">Symptoms &#8594;</a>
+           <a href="{{ url_for('TEST')}}" class="btn">Tests to be taken &#8594;</a>
+       </div>
+       <div class="col-2">
+           <img src="\static\images\p6.jpg" alt="hi">
+       </div>
+   </div>
+  </div>
+</div>
+  <div class="testimonial">
+      <div class="small-container">
+          <div class="row">
+              <div class="col-3">
+                 <i class="fa fa-quote-left" aria-hidden="true"></i><p>A Healthy Heartbeat Is a Wonderful Treat.</p>
+                    <div class="rating">
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i> 
+                    </div>
+                    <img src="\static\images\user-1.png" alt=""> 
+                    <h3><b>Daisy Williams</b></h3>            
+              </div>
+              <div class="col-3">
+                 <i class="fa fa-quote-left" aria-hidden="true"></i><p>Beat the heart disease and feel the healthy beat.</p>
+                    <div class="rating">
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i> 
+                    </div>
+                    <img src="\static\images\user-2.png" alt=""> 
+                    <h3><b>Henry Shah</b></h3>            
+              </div>
+              <div class="col-3">
+                 <i class="fa fa-quote-left" aria-hidden="true"></i><p>When the heart is at ease, the body is healthy.</p>
+                    <div class="rating">
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i> 
+                    </div>
+                    <img src="\static\images\user-3.png" alt=""> 
+                    <h3><b>Sherlyn Bond</b></h3>            
+              </div>
+          </div>
+      </div>
+<!---------Footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios Mobile phones</p>
+                    <div class="app-logo">
+                        <img src="\static\images\play-store.png" alt="">
+                        <img src="\static\images\app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h1>CADP</h1>
+                    <br> <br>
+                    <p>Our Purpose Is To Sustainably Make The Lives Easy And Prolong Your Future For Many Upcoming Years.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">CopyRight<i class="fa fa-copyright" aria-hidden="true"></i>2021- CADP</p>
+        </div>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADP</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <style>
+        @mixin tablet-and-up {
+            @media screen and (min-width: 769px) {
+                @content;
+            }
+        }
+
+        @mixin mobile-and-up {
+            @media screen and (min-width: 601px) {
+                @content;
+            }
+        }
+
+        @mixin tablet-and-down {
+            @media screen and (max-width: 768px) {
+                @content;
+            }
+        }
+
+        @mixin mobile-only {
+            @media screen and (max-width: 600px) {
+                @content;
+            }
+        }
+
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            background: radial-gradient(#3e5c92, #243b55);
+            padding: 3rem 0;
+        }
+
+        .wrapper {
+            background: radial-gradient(#3e5c92, #243b55);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: rgb(235, 224, 127);
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .sessions {
+            margin-top: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        li {
+            padding-bottom: 1.5rem;
+            border-left: 1px solid #abaaed;
+            position: relative;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        li:last-child {
+            border: 0px;
+            padding-bottom: 0;
+        }
+
+        li:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 1px solid #4e5ed3;
+            box-shadow: 3px 3px 0px #bab5f8;
+            box-shadow: 3px 3px 0px #bab5f8;
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 0px;
+        }
+
+        .time {
+            color: #d8fd05;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+
+            @include mobile-and-up {
+                font-size: .9rem;
+            }
+
+            @include mobile-only {
+                margin-bottom: .3rem;
+                font-size: 0.85rem;
+            }
+
+        }
+
+        p {
+            color: #ffffff;
+            font-family: sans-serif;
+            line-height: 1.5;
+            margin-top: 0.4rem;
+
+            @include mobile-only {
+                font-size: .9rem;
+            }
+        }
+
+
+        .body1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: relative;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 65px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-shadow: 0 0 0.15em #1da9cc;
+            user-select: none;
+            white-space: nowrap;
+            filter: blur(0.007em);
+            animation: shake 2.5s linear forwards;
+        }
+        img {
+            width: 600px;
+            height: 400px;
+            object-fit: scale-down;
+        } 
+        a{
+  background-color: red;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15%;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+        
+        h2{
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="body1">
+                <h1>PREDICTION RESULTS</h1>
+            </div>
+            <br>
+            <ul class="sessions">
+                <li>
+                    <div class="time"><b>THE PATIENT IS SUFFERING FROM CORONARY ARTERY DISEASE</b></div>
+                    <p>We recommend you to consult nearest Doctor or Hospital. </p>
+                    <br>
+                </li>
+                <li>
+                    <div class="time">Below are some of the good doctors for treatment of CAD in India that we would like to recommend</div>
+                    <br>
+                    <img src="\static\images\doc1.png" alt="">
+
+                    <img src="\static\images\doc2.png" alt="">
+
+                </li>
+                <li>
+                    <div class="time">Check PRACTO for doctors near you.</div>
+                    <p>Practo is the world's leading healthcare platform that connects millions of patients with hundreds of thousands of
+                    healthcare providers around the world and helps people make better healthcare decisions. Practo provides a singular
+                    platform that helps consumers with all their healthcare requirements – from finding the healthcare provider to booking
+                    an appointment, online doctor consultation, getting their tests done and even ordering medicines. Practo also makes
+                    software products that help healthcare providers ranging from clinics to hospitals digitise and deliver more efficient
+                    and higher quality healthcare to millions of patients around the world every day. Practo continues to be dedicated to
+                    centering healthcare around the consumer and helping billions of people live healthier longer lives.</p>
+                    <br>
+                    <h2>Check out the website here : <a href="https://www.practo.com/consult" target="_blank">PRACTO</a></h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
