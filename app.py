@@ -24,7 +24,7 @@ def predict1():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    if prediction==1:
+    if prediction>0.5:
        return render_template('yes.html')
     else:
        return render_template('no.html')
